@@ -1,0 +1,12 @@
+CREATE TABLE PLAYER_INFO_PERSONAL
+(player_id INTEGER, last_name TEXT, first_name TEXT, positionA_level1 TEXT, positionA_level2 TEXT, positionB_level1 TEXT, 
+positionB_level2 TEXT, roleA TEXT, roleB TEXT, asof DATE, asat DATE); 
+
+CREATE TABLE PLAYER_INFO_CLUB
+(player_id INTEGER, last_name TEXT, first_name TEXT, year DATE, club_name TEXT, club_location TEXT, club_coach TEXT, club_ID_code INTEGER,
+asof DATE, asat DATE);
+
+CREATE TABLE PLAYER_INFO_LEVEL1_STATS
+(player_id INTEGER, first_name TEXT, last_name TEXT, year DATE, goals INTEGER, assists INTEGER, games_played INTEGER, yellow_cards INTEGER,
+red_cards INTEGER);
+
