@@ -1,12 +1,35 @@
 CREATE TABLE PLAYER_INFO_PERSONAL
 (player_id INTEGER, last_name TEXT, first_name TEXT, positionA_level1 TEXT, positionA_level2 TEXT, positionB_level1 TEXT, 
-positionB_level2 TEXT, roleA TEXT, roleB TEXT, asof DATE, asat DATE); 
+positionB_level2 TEXT, roleA TEXT, roleB TEXT, date_of_birth DATE, age INTEGER, asof DATE, asat DATE); 
 
 CREATE TABLE PLAYER_INFO_CLUB
 (player_id INTEGER, last_name TEXT, first_name TEXT, year DATE, club_name TEXT, club_location TEXT, club_coach TEXT, club_ID_code INTEGER,
 asof DATE, asat DATE);
 
+CREATE TABLE CLUB_INFO
+(club_ID INTEGER, club_name TEXT, club_location TEXT, club_coach TEXT, club_email TEXT, club_phone TEXT, asof DATE, asat DATE);
+
 CREATE TABLE PLAYER_INFO_LEVEL1_STATS
 (player_id INTEGER, first_name TEXT, last_name TEXT, year DATE, goals INTEGER, assists INTEGER, games_played INTEGER, yellow_cards INTEGER,
 red_cards INTEGER);
+
+INSERT INTO PLAYER_INFO_PERSONAL (player_id, last_name, first_name, positionA_level1, positionA_level2, roleA)
+VALUES (1, 'Brenner', 'John', 'midfield', 'central midfielder', 'passer');
+SELECT* FROM PLAYER_INFO_PERSONAL
+
+INSERT INTO PLAYER_INFO_CLUB (player_id, last_name, first_name, year, club_name, club_location, club_coach, club_ID)
+VALUES (1, 'BRENNER', 'John','2017-01-01', 'Arsenal', 'London', 'Arsene Wenger', 1);
+SELECT * FROM PLAYER_INFO_CLUB
+
+INSERT INTO CLUB_INFO (club_ID, club_name, club_location, club_coach)
+VALUES (1, 'Arsenal', 'London','Arsene Wenger');
+SELECT * FROM CLUB_INFO
+
+INSERT INTO PLAYER_INFO_LEVEL1_STATS (player_id, last_name, first_name, year, goals, assists, games_played)
+VALUES (1, 'Brenner', 'John', '2017-01-01', 8, 10, 38)
+SELECT * FROM PLAYER_INFO_LEVEL1_STATS
+
+
+
+
 
